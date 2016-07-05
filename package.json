@@ -1,9 +1,11 @@
 {
   "name": "node-atlassian",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": "Per-Arne Andersen",
   "dependencies": {
     "axios": "^0.12.0",
     "co": "^4.6.0",
     "es6-request": "^2.0.1"
-  }
+  },
+  "main": "./node-atlassian.js"
 }
