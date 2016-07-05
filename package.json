@@ -1,0 +1,9 @@
+{
+  "name": "node-atlassian",
+  "version": "0.0.1",
+  "dependencies": {
+    "axios": "^0.12.0",
+    "co": "^4.6.0",
+    "es6-request": "^2.0.1"
+  }
+}
