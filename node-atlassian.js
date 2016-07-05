@@ -233,14 +233,10 @@ class Atlassian {
             base_url: _url,
             default_url: url.resolve(_url, this.api_path),
         };
-        config.bamboo_url = url.resolve(config.base_url, "/bamboo/");
-        config.bamboo_url = url.resolve(config.bamboo_url, this.api_path);
-        config.stash_url = url.resolve(config.base_url, "/stash/");
-        config.stash_url = url.resolve(config.stash_url, this.api_path);
-        config.crowd_url = url.resolve(config.base_url, "/crowd/");
-        config.crowd_url = url.resolve(config.crowd_url, this.api_path);
-        config.jira_url = url.resolve(config.base_url, "/jira/");
-        config.jira_url = url.resolve(config.jira_url, this.api_path);
+        config.bamboo_url = url.resolve(config.base_url, this.api_path);
+        config.stash_url = url.resolve(config.base_url, this.api_path);
+        config.crowd_url = url.resolve(config.base_url, this.api_path);
+        config.jira_url = url.resolve(config.base_url, this.api_path);
 
 
 
@@ -261,13 +257,13 @@ class Atlassian {
          console.log(err)
          });*/
 
-        co(function*(){
-            /*let projects = yield that.Bamboo.projects();
+        /*co(function*(){
+           let projects = yield that.Bamboo.projects();
             let plans = yield that.Bamboo.plans("DAT20142015");
             let branches = yield that.Bamboo.branches("DAT20142015-HAN");
             console.log(projects.length);
             console.log(plans.length);
-            console.log(branches.length);*/
+            console.log(branches.length);
 
             let build = yield that.Bamboo.build("DAT20142015-HAN216");
 
@@ -277,12 +273,9 @@ class Atlassian {
             console.log(build_status);
         }).catch(function(err){
             console.log(err)
-        });
+        });*/
 
 
-        setInterval(function(){
-
-        }, 1000)
     }
 
 
