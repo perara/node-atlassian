@@ -224,9 +224,6 @@ class Atlassian {
     constructor(username, password, _url){
         this.api_path = "rest/api/latest/";
 
-
-
-
         var config = {
             username: username,
             password: password,
@@ -245,41 +242,6 @@ class Atlassian {
         //this.Jira = "";
         //this.Crowd = "";
 
-        var that = this;
-
-        /*
-         co(function*(){
-         let projects = yield that.Stash.projects();
-         let project_view = yield that.Stash.project_view(projects[3].key)
-         let repositories = yield that.Stash.repositories(project_view.key)
-         let branches = yield that.Stash.branches(project_view.key, repositories[25].slug)
-         }).catch(function(err){
-         console.log(err)
-         });*/
-
-        /*co(function*(){
-           let projects = yield that.Bamboo.projects();
-            let plans = yield that.Bamboo.plans("DAT20142015");
-            let branches = yield that.Bamboo.branches("DAT20142015-HAN");
-            console.log(projects.length);
-            console.log(plans.length);
-            console.log(branches.length);
-
-            let build = yield that.Bamboo.build("DAT20142015-HAN216");
-
-            console.log(build.buildNumber)
-            let build_status =  yield that.Bamboo.build_status(build.planKey, build.buildNumber)
-
-            console.log(build_status);
-        }).catch(function(err){
-            console.log(err)
-        });*/
-
-
-    }
-
-
-    help(){
 
     }
 
