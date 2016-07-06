@@ -1,6 +1,6 @@
 {
   "name": "node-atlassian",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Per-Arne Andersen",
   "dependencies": {
     "axios": "^0.12.0",
