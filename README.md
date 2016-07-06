@@ -13,28 +13,29 @@ Also the package does not fully cover the API of these two. I accept pull reques
 let node_atlassian = require("node-atlassian");
 let Atlassian = new node_atlassian("username", "password", "http://stash-or-bamboo.com");
 ```
+All functions returns a promise, but it is preffered to use with for example co
 
 #### Bamboo API
-**Projects** ``let projects = Atlassian.Bamboo.projects();``
+**Projects** ``let projects = yield Atlassian.Bamboo.projects();``
 
-**Plans** ``let plans = Atlassian.Bamboo.plans(projects[0].key);``
+**Plans** ``let plans = yield Atlassian.Bamboo.plans(projects[0].key);``
 
-**Branches** ``let branches = Atlassian.Bamboo.branches(plans[0].key);``
+**Branches** ``let branches = yield Atlassian.Bamboo.branches(plans[0].key);``
 
-**Build** ``let build = Atlassian.Bamboo.build(branches[0].key);``
+**Build** ``let build = yield Atlassian.Bamboo.build(branches[0].key);``
 
-**Build Status** ``let status = Atlassian.Bamboo.build_status(build.planKey, build.buildNumber);``
+**Build Status** ``let status = yield Atlassian.Bamboo.build_status(build.planKey, build.buildNumber);``
 
 
 
 #### Stash API
-**Projects** ``let projects = Atlassian.Stash.projects();``
+**Projects** ``let projects = yield Atlassian.Stash.projects();``
 
-**Project View** ``let project_view = Atlassian.Stash.project_view(projects[0].key);``
+**Project View** ``let project_view = yield Atlassian.Stash.project_view(projects[0].key);``
 
-**Repositories** ``let repositories = Atlassian.Stash.repositories(projects[0].key);``
+**Repositories** ``let repositories = yield Atlassian.Stash.repositories(projects[0].key);``
 
-**Branches** ``let branches = Atlassian.Stash.branches(projects[0].key, repositories[0].slug);``
+**Branches** ``let branches = yield Atlassian.Stash.branches(projects[0].key, repositories[0].slug);``
 
 # Licence
 The MIT License (MIT)
